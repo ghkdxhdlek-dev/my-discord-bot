@@ -1528,6 +1528,7 @@ async def on_ready():
     except Exception as e:
         print(f"⚠️ 동기화 실패: {e}")
 
-keep_alive()  # 추가
+# keep_alive 함수는 이미 이 파일 상단에 정의돼 있으므로 그대로 사용
+keep_alive()  
+bot.run(os.getenv('BOT_TOKEN'))  # 토큰은 환경변수에서 불러오기
 
-bot.run(os.getenv('BOT_TOKEN'))  # 토큰 부분을 환경변수로
