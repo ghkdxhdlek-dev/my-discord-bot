@@ -17,6 +17,9 @@ from datetime import datetime
 from discord import ui, ButtonStyle, Embed
 from datetime import datetime, timedelta
 
+from keep_alive import keep_alive
+
+keep_alive()
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -1510,5 +1513,6 @@ async def on_ready():
         print(f"🔄 {len(synced)}개의 슬래시 명령어 동기화됨")
     except Exception as e:
         print(f"⚠️ 동기화 실패: {e}")
+
 
 bot.run("MTQwNzY4MzI0OTczOTkyNzU2Mg.GhTx4S.uHxjy-E1tqEELhcMR-BpC6QSl3ScF35EeD7Cg4")
