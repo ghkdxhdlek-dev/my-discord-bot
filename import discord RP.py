@@ -29,7 +29,7 @@ def home():
     return "Bot is running!"
 
 def run():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host="0.0.0.0", port=8080)
 
 def keep_alive():
     t = threading.Thread(target=run)
@@ -1531,4 +1531,5 @@ async def on_ready():
 # keep_alive 함수는 이미 이 파일 상단에 정의돼 있으므로 그대로 사용
 keep_alive()  
 bot.run(os.getenv('BOT_TOKEN'))  # 토큰은 환경변수에서 불러오기
+
 
