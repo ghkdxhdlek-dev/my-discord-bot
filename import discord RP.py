@@ -1529,4 +1529,5 @@ async def on_ready():
         print(f"⚠️ 동기화 실패: {e}")
 
 keep_alive()  # 추가
+
 bot.run(os.getenv('BOT_TOKEN'))  # 토큰 부분을 환경변수로
